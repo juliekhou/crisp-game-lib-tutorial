@@ -1,7 +1,7 @@
-title = "";
+title = "Catch Professor Jiggly";
 
 description = `
-[Click] Turn
+[Click] to Turn
 `;
 
 // a = border
@@ -33,7 +33,13 @@ Y Yyy
 `
 ];
 
+const G = {
+  WIDTH: 150,
+  HEIGHT: 150,
+}
+
 options = {
+  viewSize: {x: G.WIDTH, y: G.HEIGHT},
   theme: "simple",
   isPlayingBgm: true,
   isReplayEnabled: true,
@@ -82,7 +88,7 @@ const angleOfs = [
 function update() {
   if (!ticks) {
     // color(colors[rndi(colors.length)]);
-	color("black");
+	  color("black");
     head = { pos: vec(8, 8), angle: 0, rotation: 1 };
     headMoveTicks = 0;
     isHeadGettingDollar = false;
@@ -94,27 +100,31 @@ function update() {
   // ************************* border *************************
 
   // left border
-  for (let y = 1; y <= 11; y++) {
+  for (let y = 1; y <= 18; y++) {
     // text(edgeWallChars, 3, 9 + y * 6);
-	char("a", 4, 11 + y * 7);
+  // color(colors[rndi(colors.length)]);
+  char("a", 4, 11 + y * 7);
   }
 
   // right border
-  for (let y = 1; y <= 11; y++) {
+  for (let y = 1; y <= 18; y++) {
     // text(edgeWallChars, 3, 9 + y * 6);
-	char("a", 96, 11 + y * 7);
+  // color(colors[rndi(colors.length)]);
+	char("a", 146, 11 + y * 7);
   }
 
   // top border
-  for (let y = 0; y <= 11; y++) {
+  for (let y = 0; y <= 17; y++) {
     // text(edgeWallChars, 3, 9 + y * 6);
+  // color(colors[rndi(colors.length)]);
 	char("a", 6 + y * 8, 11);
   }
 
   // bottom border
-  for (let y = 0; y <= 11; y++) {
+  for (let y = 0; y <= 17; y++) {
     // text(edgeWallChars, 3, 9 + y * 6);
-	char("a", 6 + y * 8, 95);
+  // color(colors[rndi(colors.length)]);
+	char("a", 6 + y * 8, 145);
   }
 
   // all
@@ -217,3 +227,5 @@ function update() {
     // color(colors[rndi(colors.length)]);
   }
 }
+
+// http://localhost:4000/?tryThree
