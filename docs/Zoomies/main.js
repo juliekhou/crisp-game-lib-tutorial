@@ -123,8 +123,8 @@ function update() {
 		}
 	}
 
-	text(sec.toString(), 3, 10);
-	text(num.toString(), 3, 40);
+	// text(sec.toString(), 3, 10);
+	// text(num.toString(), 3, 40);
 	
 	if (num == 0 && play == true){
 		if (redWin == false && greenWin == false){
